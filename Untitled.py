@@ -360,13 +360,13 @@ st.write(ytest_predict)
 # In[48]:
 
 
-st.write(print(classification_report(y_train, ytrain_predict),'\n'))
+st.write(print(classification_report(y_train, ytrain_predict),'-\nline'))
 
 
 # In[49]:
 
 
-st.write(print(classification_report(y_test, ytest_predict),'\n'))
+st.write(print(classification_report(y_test, ytest_predict),'-\nline'))
 
 
 # In[ ]:
@@ -485,7 +485,9 @@ st.write(df_test_copy['BookingsCheckedIn'].value_counts())
 
 final_predictions = best_grid_ANN.predict(df_test_copy)
 submission=pd.DataFrame([test_file_ids,final_predictions]).T
+st.write("predicted output ")
 st.write(submission["Unnamed 0"].value_counts())
-# submission.rename(columns={"Unnamed 0": "Loan_Status"},inplace=True)
-# submission.to_csv('submission.csv',index = False)
+submission.rename(columns={"Unnamed 0": "BookingsCheckedIn"},inplace=True)
+submission.to_csv('submission.csv',index = False)
+files.download('submission.csv')
 
