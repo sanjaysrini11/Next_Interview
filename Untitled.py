@@ -200,7 +200,8 @@ plt.title('Graph')
 st.pyplot(fig)
 
 
-# ###### More rooms where booked by the customers due to direct market segment and corporate booking.
+# ###### 
+st.text("More rooms where booked by the customers due to direct market segment and corporate booking.")
 
 # In[25]:
 
@@ -211,7 +212,7 @@ plt.title('Graph')
 st.pyplot(fig)
 
 
-# More rooms where booked for the corporate people.
+st.text("More rooms where booked for the corporate people.")
 
 # In[26]:
 
