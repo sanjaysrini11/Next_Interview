@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # In[1]:
-pip install -r https://github.com/sanjaysrini11/Next_Interview/blob/main/requirements.txt
+python -m pip install https://github.com/sanjaysrini11/Next_Interview/blob/e1934da2765f18e308e10162eb37b434d959384a/requirements.txt
 
 from sklearn.datasets import load_boston
 import pandas as pd
