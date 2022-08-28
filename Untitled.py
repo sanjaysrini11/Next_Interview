@@ -445,11 +445,10 @@ st.write(df_test_copy['BookingsCheckedIn'].value_counts())
 
 final_predictions = ANN_wgs.predict(df_test_copy)
 submission=pd.DataFrame([test_file_ids,final_predictions]).T
-st.write("predicted output ")
-st.text(submission["Unnamed 0"].value_counts())
-submission.rename(columns={"Unnamed 0": "Predicted_BookingsCheckedIn"},inplace=True)
-newpredicted_output = pd.concat([submission,df_test_copy['BookingsCheckedIn']],axis=1)
-st.write(newpredicted_output)
+submission["Unnamed 0"].value_counts()
+submission.rename(columns={"Unnamed 0": "BookingsCheckedIn"},inplace=True)
+# submission.to_csv('submission.csv',index = False)
+submission
 # 
 # st.text(submission)
 # submission.to_csv('submission.csv',index = False)
