@@ -443,7 +443,7 @@ st.write(df_test_copy['BookingsCheckedIn'].value_counts())
 # In[64]:
 
 
-final_predictions = best_grid_ANN.predict(df_test_copy)
+final_predictions = ANN_wgs.predict(df_test_copy)
 submission=pd.DataFrame([test_file_ids,final_predictions]).T
 st.write("predicted output ")
 st.write(submission["Unnamed 0"].value_counts())
