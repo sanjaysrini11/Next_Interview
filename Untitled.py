@@ -301,13 +301,13 @@ st.write(ytest_predict)
 # In[40]:
 
 
-st.write((classification_report(y_train, ytrain_predict),'\n'))
+st.write((classification_report(y_train, ytrain_predict),'-\nline'))
 
 
 # In[41]:
 
 
-st.write((classification_report(y_test, ytest_predict),'\n'))
+st.write((classification_report(y_test, ytest_predict),'-\nline'))
 
 
 # ### ANN with grid search
