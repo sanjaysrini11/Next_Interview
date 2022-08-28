@@ -301,14 +301,15 @@ st.write(ytest_predict)
 # In[40]:
 
 
-st.write((classification_report(y_train, ytrain_predict),'-\nline'))
+# st.write((classification_report(y_train, ytrain_predict),'-\nline'))
+st.text('Model Report:\n ' + classification_report(y_train, ytrain_predict))
 
 
 # In[41]:
 
 
-st.write((classification_report(y_test, ytest_predict),'-\nline'))
-
+# st.write((classification_report(y_test, ytest_predict),'-\nline'))
+st.text('Model Report:\n ' + classification_report(y_test, ytest_predict))
 
 # ### ANN with grid search
 
@@ -360,14 +361,14 @@ st.write(ytest_predict)
 # In[48]:
 
 
-st.write(print(classification_report(y_train, ytrain_predict),'-\nline'))
-
+# st.write(print(classification_report(y_train, ytrain_predict),'-\nline'))
+st.text('Model Report:\n ' + classification_report(y_train, ytrain_predict))
 
 # In[49]:
 
 
-st.write(print(classification_report(y_test, ytest_predict),'-\nline'))
-
+# st.write(print(classification_report(y_test, ytest_predict),'-\nline'))
+st.text('Model Report:\n ' + classification_report(y_test, ytest_predict))
 
 # In[ ]:
 
