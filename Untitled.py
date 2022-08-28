@@ -334,73 +334,9 @@ st.text('Model Report:\n ' + classification_report(y_train, ytrain_predict))
 # st.write((classification_report(y_test, ytest_predict),'-\nline'))
 st.text('Model Report:\n ' + classification_report(y_test, ytest_predict))
 
-# ### ANN with grid search
-
-# In[42]:
-
-
-param_grid_ANN = { 'hidden_layer_sizes': [93,95,97,99,102,105],
-                  'activation': [ 'relu','adam'], 
-                  'max_iter': [10000,12500], 
-                  'solver': ['adam'], 
-                  'tol': [0.00001,0.0001], }
-ANN = MLPClassifier(random_state=42)
-
-
-# In[43]:
-
-
-grid_search_ANN = GridSearchCV(estimator = ANN, param_grid = param_grid_ANN, cv = 3)
-st.write(grid_search_ANN.fit(x_train, y_train))
-
-
-# In[44]:
-
-
-st.write(grid_search_ANN.best_params_)
-
-
-# In[45]:
-
-
-best_grid_ANN = grid_search_ANN.best_estimator_
-st.write(best_grid_ANN)
-
-
-# In[46]:
-
-
-ytrain_predict = best_grid_ANN.predict(x_train)
-st.write(ytrain_predict)
-
-
-# In[47]:
-
-
-ytest_predict = best_grid_ANN.predict(x_test)
-st.write(ytest_predict)
-
-
-# In[48]:
-
-
-# st.write(print(classification_report(y_train, ytrain_predict),'-\nline'))
-st.text('Model Report:\n ' + classification_report(y_train, ytrain_predict))
-
-# In[49]:
-
-
-# st.write(print(classification_report(y_test, ytest_predict),'-\nline'))
-st.text('Model Report:\n ' + classification_report(y_test, ytest_predict))
-
-# In[ ]:
-
-
-
-
 
 # In[50]:
-st.write("test data")
+st.text("test data")
 
 df_test = pd.read_csv("test_data_evaluation_part2.csv")
 st.write(df_test.head())
