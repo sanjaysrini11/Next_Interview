@@ -454,5 +454,5 @@ st.write("predicted output ")
 st.write(submission["Unnamed 0"].value_counts())
 submission.rename(columns={"Unnamed 0": "BookingsCheckedIn"},inplace=True)
 submission.to_csv('submission.csv',index = False)
-files.download('submission.csv')
+# files.download('submission.csv')
 
