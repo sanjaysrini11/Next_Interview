@@ -257,9 +257,6 @@ st.write("Label Encoding",df_cat_train.head())
 df_train_copy = pd.concat([df_cat_train,df_num_train],axis=1)
 st.write(df_train_copy.head())
 
-from scipy.stats import zscore
-df_train_copy = df_train_copy.apply(zscore)
-st.write(df_train_copy.head())
 
 # In[31]:
 
@@ -429,8 +426,6 @@ st.write(df_cat_test.head())
 df_test_copy = pd.concat([df_cat_test,df_num_test],axis=1)
 st.write(df_test_copy.head())
 
-df_test_copy = df_test_copy.apply(zscore)
-st.write(df_test_copy.head())
 
 # In[62]:
 
@@ -452,9 +447,10 @@ final_predictions = ANN_wgs.predict(df_test_copy)
 submission=pd.DataFrame([test_file_ids,final_predictions]).T
 st.write("predicted output ")
 st.text(submission["Unnamed 0"].value_counts())
-newpredicted_output = pd.concat([submission["Unnamed 0"],df_test_copy['BookingsCheckedIn']],axis=1)
+submission.rename(columns={"Unnamed 0": "Predicted_BookingsCheckedIn"},inplace=True)
+newpredicted_output = pd.concat([submission,df_test_copy['BookingsCheckedIn']],axis=1)
 st.write(newpredicted_output)
-# submission.rename(columns={"Unnamed 0": "BookingsCheckedIn"},inplace=True)
+# 
 # st.text(submission)
 # submission.to_csv('submission.csv',index = False)
 # files.download('submission.csv')
