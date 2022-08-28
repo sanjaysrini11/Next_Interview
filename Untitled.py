@@ -2,6 +2,7 @@
 # coding: utf-8
 
 # In[1]:
+st.text("Part 1")
 import streamlit as st
 import json
 import re
@@ -15,6 +16,11 @@ r.extend(re.findall('"code":(.\d+?)',y))
 arr = [int(i) for i in r]
 st.text("regex to extract all the numbers with orange color background from the below text in italics:\n")
 st.text(arr)
+ 
+st.text("Part 2")
+st.text("Here is the data set that contains the history of customer booking in a hotel.")
+
+
 
 
 
