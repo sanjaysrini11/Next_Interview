@@ -453,6 +453,7 @@ submission=pd.DataFrame([test_file_ids,final_predictions]).T
 st.write("predicted output ")
 st.write(submission["Unnamed 0"].value_counts())
 submission.rename(columns={"Unnamed 0": "BookingsCheckedIn"},inplace=True)
-submission.to_csv('submission.csv',index = False)
+st.text(submission)
+# submission.to_csv('submission.csv',index = False)
 # files.download('submission.csv')
 
