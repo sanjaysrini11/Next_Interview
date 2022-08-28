@@ -280,7 +280,7 @@ st.write(df_train_copy.corr())
 # In[34]:
 
 
-fig = plt.figure(figsize=(20,10))
+fig = plt.figure(figsize=(30,20))
 sns.heatmap(df_train_copy.corr(), annot=True,mask=np.triu(df_train_copy.corr(),+1))
 st.pyplot(fig)
 
