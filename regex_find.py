@@ -3,7 +3,7 @@
 
 # In[49]:
 
-
+import streamlit as st
 import json
 import re
 
@@ -14,10 +14,7 @@ y = json.dumps(c)
 r = re.findall('{"id":(.+?)}',y)
 r.extend(re.findall('"code":(.\d+?)',y))
 arr = [int(i) for i in r]
-arr
-
-
-# In[ ]:
+st.write("Regex -",arr)
 
 
 
