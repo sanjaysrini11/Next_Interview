@@ -14,7 +14,7 @@ y = json.dumps(c)
 r = re.findall('{"id":(.+?)}',y)
 r.extend(re.findall('"code":(.\d+?)',y))
 arr = [int(i) for i in r]
-st.write("Regex -",arr)
+st.text("Regex -",arr)
 
 
 
