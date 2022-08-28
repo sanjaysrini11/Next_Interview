@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # In[1]:
-Run pip install -r requirements.txt
+pip install -r requirements.txt
 
 from sklearn.datasets import load_boston
 import pandas as pd
