@@ -2,7 +2,6 @@
 # coding: utf-8
 
 # In[1]:
-python -m pip install https://github.com/sanjaysrini11/Next_Interview/blob/e1934da2765f18e308e10162eb37b434d959384a/requirements.txt
 
 from sklearn.datasets import load_boston
 import pandas as pd
@@ -28,7 +27,7 @@ import warnings; warnings.filterwarnings('ignore')
 
 # Visualize Tree
 from sklearn.tree import export_graphviz
-from IPython.display import Image
+# from IPython.display import Image
 from os import system
 
 # Display settings
